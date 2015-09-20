@@ -1,8 +1,8 @@
 require 'test_helper'
 
 class ProductControllerTest < ActionController::TestCase
-  test "should get upload" do
-    get :upload
+  test "should get list" do
+    get :list
     assert_response :success
   end
 

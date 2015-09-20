@@ -1,6 +1,6 @@
-<h1>Product#upload</h1>
-<%= form_tag("/upload", method: "get") do %>
-  <%= label_tag(:uploadurl, "Upload URL:") %>
-  <%= text_field_tag(:uploadurl) %>
-  <%= submit_tag("Upload") %>
+<h1>Upload products</h1>
+<%= form_tag("/product/upload_products", method: "post") do %>
+  <%= label_tag(:file_url, "Products CSV file URL:") %>
+  <%= text_field_tag(:file_url) %>
+  <%= submit_tag("Upload products") %>
 <% end %>

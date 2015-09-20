@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Myapp</title>
+  <title>Simple Online Store</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <div id="header_nav">
+      <%=link_to 'HOME', product_category_list_path%>
+      <%=link_to 'UPLOAD', product_upload_path%>
+      <%=link_to 'ALL-IN-ONE PAGE', product_list_path%>
+    </div>
+  </header>
 
 <%= yield %>
 

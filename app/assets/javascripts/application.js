@@ -14,3 +14,4 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+<script type="text/javascript" src="./jquery-2.1.4.min.js" />

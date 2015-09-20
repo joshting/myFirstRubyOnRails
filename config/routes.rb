@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
+  resources:products
+  get 'product/category_list'
+  get 'product/category'
+  get 'product/list'
+  get 'product/show'
   get 'product/upload'
+  post 'product/upload_products'
+  root to: "product#list"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

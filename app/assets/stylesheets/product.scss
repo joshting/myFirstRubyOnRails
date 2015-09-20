@@ -1,3 +1,51 @@
 // Place all the styles related to the Product controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+table.product_list th {
+  font-style: bold;
+  font-family: "Arial Black", Gadget, sans-serif;
+  background: #A4A4A4;
+}
+
+table.product_list {
+  width: 100%;
+  border: solid 2px;
+  border-collapse: collapse;
+}
+
+table.product_list td {
+  font-family: Georgia, serif;
+  border: solid 1px #819FF7;;
+  padding: 10px;
+}
+
+table.show_product {
+  align-self: auto;
+  width: 80%;
+  border: solid 2px;
+  border-collapse: collapse;
+}
+
+table.show_product td {
+  font-family: "Arial Black", Gadget, sans-serif;
+  border: solid 1px #819FF7;;
+  padding: 10px;
+}
+
+.filter_list {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+}
+
+label {
+  font-size: 1.2em;
+  font-family: "Arial", sans-serif;
+}
+
+.cat_list {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 2em;
+}

@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+ #header_nav {
+   display: block;
+   padding: 10px;
+   background: #A9D0F5;
+ }
+
+ #header_nav a {
+   font-size: 1.5em;
+   text-decoration: none;
+   padding: 0px 0px 0px 25px
+ }
