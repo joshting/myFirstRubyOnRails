@@ -1,0 +1,42 @@
+<h1>Product List</h1>
+<%
+  category_array = Product.uniq.pluck(:category)
+  category_array.unshift("ALL")
+%>
+<div class="filter_list">
+<label>Category Filter: </label><%= select_tag(:filter_category,options_for_select(category_array,:selected => params[:cat])) %>
+</div>
+<table class="product_list">
+  <tr>
+    <th>ProductID</th>
+    <th>Category</th>
+    <th>Name</th>
+    <th>Price</th>
+  <tr>
+<%
+if !params[:cat] || params[:cat]=="ALL"
+  product_arr = Product.order(:category).order(:product_name).all
+else
+  product_arr = Product.where(category:params[:cat]).order(:category).order(:product_name).all
+end
+
+product_arr.each do |product| %>
+  <tr>
+    <td><%=product.productid%></td>
+    <td><%=product.category%></td>
+    <td><%=product.product_name%></td>
+    <td><%=number_to_currency(product.price)%></td>
+  </tr>
+<%end%>
+</table>
+<%if Product.all.size == 0%>
+  <h3>There are no products</h3>
+<%end%>
+
+<script>
+$(function(){
+  $('#filter_category').change(function(){
+    window.location = '?cat=' + $('#filter_category').val();
+  })
+});
+</script>

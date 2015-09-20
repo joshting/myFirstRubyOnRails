@@ -1,0 +1,7 @@
+<h1>SUCCESSFULLY UPLOADED PRODUCTS</h1>
+<%if flash[:create_count]%>
+<p><%=flash[:create_count]%> new product(s) imported</p>
+<%end%>
+<%if flash[:update_count]%>
+<p><%=flash[:update_count]%> existing product(s) updated</p>
+<%end%>

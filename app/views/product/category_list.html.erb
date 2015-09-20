@@ -1,0 +1,12 @@
+<h1>Categories</h1>
+<%
+  category_array = Product.uniq.pluck(:category).sort
+%>
+<ol class="cat_list">
+  <%category_array.each do |category| %>
+    <li><%=link_to category, product_category_path(:cat => category)%></li>
+  <%end%>
+</ol>
+<%if category_array.size == 0%>
+  <h3>There are no categories</h3>
+<%end%>

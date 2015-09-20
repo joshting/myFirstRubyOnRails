@@ -1,0 +1,17 @@
+<h1>ProductID: <%=params[:productid]%></h1>
+<% product_arr = Product.where(productid:params[:productid])%>
+<%
+if product_arr.size > 0
+
+%>
+  <table class="show_product">
+    <tr>
+      <td><strong>NAME</strong></td><td><%=product_arr.first.product_name%></td>
+    </tr>
+    <tr>
+      <td><strong>PRICE</strong></td><td><%=number_to_currency(product_arr.first.price)%></td>
+    </tr>
+  </table>
+<%else%>
+  <p>THERE IS NO SUCH PRODUCT</p>
+<%end%>

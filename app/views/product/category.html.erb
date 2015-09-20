@@ -1,0 +1,18 @@
+<h1>Category: <%=params[:cat]%></h1>
+<table class="product_list">
+  <tr>
+    <th>ProductID</th>
+    <th>Name</th>
+  <tr>
+<% for product in @products %>
+  <tr>
+    <td><%=link_to product.productid, product_show_path(:productid => product.productid)%></td>
+    <td><%=link_to product.product_name, product_show_path(:productid => product.productid)%></td>
+  </tr>
+<%end%>
+</table>
+<%if Product.all.size == 0%>
+  <h3>There are no products</h3>
+<%end%>
+
+<%= will_paginate @products %>
